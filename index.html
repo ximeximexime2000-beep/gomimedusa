@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Pastel Mágico</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importamos una fuente divertida de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/banner.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/hr.css">
+    <link rel="stylesheet" href="CSS/piedepagina.css">
+    <link rel="stylesheet" href="CSS/productos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">¡GomiMedusa!</div>
+        
+        <!-- Checkbox para el menú móvil (Hack sin JS) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li style="--i:1"><a href="#">TIPOS</a></li>
+            <li style="--i:2"><a href="#">SABORES</a></li>
+            <li style="--i:3"><a href="#">RECETAS</a></li>
+            <li style="--i:4"><a href="#">PRECIO</a></li>
+            <li style="--i:5"><a href="#" class="contact-btn">CONTACTANOS</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="banner-container">
+    <div class="banner-item video-item">
+        <video autoplay muted loop>
+            <source src="videos/videoplayback (1).mp4" type="video/mp4">
+        </video>
+        <div class="overlay-text">Procesos</div>
+    </div>
+
+    <a href="#modal1" class="banner-item img-item">
+        <img src="IMAGENES/AVQLX7PXYNBR5PNRM52OFJVUTY.jpg" alt="Postre 1">
+        <div class="overlay-text">Nuestros Sabores</div>
+    </a>
+
+    <div class="banner-item video-item">
+        <video autoplay muted loop>
+            <source src="videos/videoplayback.mp4" type="video/mp4">
+        </video>
+        <div class="overlay-text">Calidad</div>
+    </div>
+
+    <a href="#modal2" class="banner-item img-item">
+        <img src="IMAGENES/pick-and-mix-171342_1920.jpg" alt="Postre 2">
+        <div class="overlay-text">Recetas VIP</div>
+    </a>
+</section>
+
+<div id="modal1" class="modal-overlay">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="IMAGENES/AVQLX7PXYNBR5PNRM52OFJVUTY.jpg" alt="Detalle">
+        <div class="modal-text">
+            <h2>Helados Artesanales</h2>
+            <p>Nuestros sabores son creados con frutas 100% orgánicas y técnicas tradicionales. ¡Pruébalos hoy mismo!</p>
+            <span class="price-tag">$5.50</span>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal-overlay">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="IMAGENES/pick-and-mix-171342_1920.jpg" alt="Detalle">
+        <div class="modal-text">
+            <h2>Pastelería Fina</h2>
+            <p>Cada pastel cuenta una historia. Utilizamos chocolate belga y vainilla de Madagascar.</p>
+            <span class="price-tag">$12.00</span>
+        </div>
+    </div>
+</div>
+
+    <header class="hero">
+        <h1>Bienvenidos al mundo de los sabores</h1>
+        <p>Explora nuestras delicias en colores pastel.</p>
+    </header>
+
+    <!-- Separador divertido -->
+<hr class="separator-candy">
+
+<!-- Sección de Información en Grilla -->
+<section class="info-grid">
+    <!-- Apartado 1 -->
+    <div class="info-card">
+        <div class="card-icon">🍰</div>
+        <h3>Postres Artesanales</h3>
+        <p class="preview-text">La base de nuestra dulzura...</p>
+        
+        <input type="checkbox" id="read-more-1" class="read-more-state">
+        <div class="more-content">
+            <p>Utilizamos recetas transmitidas por generaciones, mezclando ingredientes locales con técnicas de alta repostería francesa.</p>
+        </div>
+        
+        <label for="read-more-1" class="read-more-trigger"></label>
+    </div>
+
+    <!-- Apartado 2 -->
+    <div class="info-card">
+        <div class="card-icon">🍓</div>
+        <h3>Frutas Frescas</h3>
+        <p class="preview-text">Selección premium cada mañana...</p>
+        
+        <input type="checkbox" id="read-more-2" class="read-more-state">
+        <div class="more-content">
+            <p>Solo trabajamos con productores orgánicos. Nuestras fresas y moras son recolectadas en su punto exacto de maduración.</p>
+        </div>
+        
+        <label for="read-more-2" class="read-more-trigger"></label>
+    </div>
+
+    <!-- Apartado 3 -->
+    <div class="info-card">
+        <div class="card-icon">🧁</div>
+        <h3>Cupcakes Gourmet</h3>
+        <p class="preview-text">Pequeños bocados de felicidad...</p>
+        
+        <input type="checkbox" id="read-more-3" class="read-more-state">
+        <div class="more-content">
+            <p>Desde red velvet hasta combinaciones exóticas como maracuyá y chocolate blanco. ¡Hay uno para cada gusto!</p>
+        </div>
+        
+        <label for="read-more-3" class="read-more-trigger"></label>
+    </div>
+
+    <!-- Apartado 4 -->
+    <div class="info-card">
+        <div class="card-icon">🍬</div>
+        <h3>Dulces Veganos</h3>
+        <p class="preview-text">Sabor sin límites...</p>
+        
+        <input type="checkbox" id="read-more-4" class="read-more-state">
+        <div class="more-content">
+            <p>Creemos en la inclusión. Ofrecemos una línea completa libre de productos de origen animal sin sacrificar el sabor.</p>
+        </div>
+        
+        <label for="read-more-4" class="read-more-trigger"></label>
+    </div>
+</section>
+    <!-- Separador divertido -->
+<hr class="separator-candy">
+
+<section class="product-showcase">
+    <h2 class="section-title">Nuestras Delicias</h2>
+    
+    <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi asidas.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Pastel de Nube</h4>
+                <p>Bizcocho extra suave con crema de vainilla.</p>
+                <span class="price">$25.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi azucar.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Bowl Tropical</h4>
+                <p>Frutas frescas con yogurt de fresa.</p>
+                <span class="price">$12.50</span>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi chamoy.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Cheesecake Rosa</h4>
+                <p>Base de galleta y jalea de frambuesa.</p>
+                <span class="price">$18.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi enchiladas.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Macarons Mix</h4>
+                <p>Caja de 6 unidades de sabores surtidos.</p>
+                <span class="price">$15.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi panditas.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Cupcake Lila</h4>
+                <p>Muffin de arándanos con frosting lila.</p>
+                <span class="price">$4.50</span>
+            </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi pelables.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Batido Mágico</h4>
+                <p>Leche de coco y chispas de colores.</p>
+                <span class="price">$8.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi pinguino.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Dona Glaseada</h4>
+                <p>Dona artesanal con cobertura pastel.</p>
+                <span class="price">$3.50</span>
+            </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi rueda.jpg">
+            </div>
+            <div class="product-info">
+                <h4>Tarta de Limón</h4>
+                <p>Merengue suizo y toque cítrico.</p>
+                <span class="price">$22.00</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer-social">
+        <div class="footer-content">
+            <h2 class="footer-title">¡Hablemos de Dulces!</h2>
+            <p>Síguenos o escríbenos para pedidos especiales</p>
+            
+            <div class="social-grid">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/1234567890" target="_blank" class="social-bubble whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/tu_usuario" target="_blank" class="social-bubble instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Pastelera #456, Ciudad Dulce</p>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            &copy; 2024 Sweet Studio | Todos los derechos reservados
+        </div>
+    </footer>
+
+</body>
+</html>
