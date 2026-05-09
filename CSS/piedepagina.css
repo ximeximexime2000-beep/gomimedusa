@@ -1,0 +1,98 @@
+/* --- FOOTER CON LOGOS SOCIALES --- */
+.footer-social {
+    /* Degradado pastel suave de azul a rosa */
+    background: linear-gradient(135deg, #a1c4fd 0%, #fbc2eb 100%);
+    padding: 80px 20px 20px 20px;
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    color: white;
+    border-top-left-radius: 50% 20px; /* Efecto curva superior */
+    border-top-right-radius: 50% 20px;
+}
+
+.footer-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.social-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px 0;
+}
+
+/* Burbujas Sociales */
+.social-bubble {
+    text-decoration: none;
+    color: #555;
+    background: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: bold;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Iconos */
+.social-bubble i {
+    font-size: 1.8rem;
+}
+
+/* Colores específicos de marca al hacer HOVER */
+.whatsapp:hover {
+    background-color: #25D366;
+    color: white;
+    transform: translateY(-10px) scale(1.1);
+}
+
+.instagram:hover {
+    background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285AEB 90%);
+    color: white;
+    transform: translateY(-10px) scale(1.1);
+}
+
+/* Animación de entrada para los botones */
+.social-bubble {
+    animation: bounceIn 1s ease;
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.3); }
+    50% { opacity: 1; transform: scale(1.05); }
+    70% { transform: scale(0.9); }
+    100% { transform: scale(1); }
+}
+
+.footer-info {
+    margin-top: 30px;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.footer-copy {
+    margin-top: 60px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* Ajuste móvil */
+@media (max-width: 480px) {
+    .social-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-bubble {
+        width: 200px;
+        justify-content: center;
+    }
+}
