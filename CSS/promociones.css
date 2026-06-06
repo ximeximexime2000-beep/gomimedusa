@@ -1,0 +1,172 @@
+/* --- SECCIÓN PROMOCIONES (GRILLA 2x2) --- */
+.promo-section {
+    padding: 60px 5%;
+    background: linear-gradient(180deg, #e8eaf6 0%, #ffe0b2 100%);
+    text-align: center;
+}
+
+.promo-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.6rem;
+    color: #ffb74d;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px white, 4px 4px 0px rgba(0,0,0,0.05);
+}
+
+/* Configuración de la Grilla 2x2 */
+.promo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columnas */
+    grid-template-rows: repeat(2, auto);   /* 2 Filas */
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Tarjetas Promocionales */
+.promo-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(255, 183, 77, 0.2);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #fff;
+    transition: transform 0.4s ease;
+}
+
+.promo-card:hover {
+    transform: translateY(-8px);
+}
+
+/* 1. Imagen (Arriba) y su Animación Hover */
+.promo-img-link {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+}
+
+.promo-img-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94), filter 0.3s ease;
+}
+
+/* Efecto hover interactivo en la imagen */
+.promo-img-link:hover img {
+    transform: scale(1.15) rotate(-1deg);
+    filter: saturate(1.2); /* Satura los colores pastel al pasar el mouse */
+}
+
+/* 2. Cuadro de Promoción (Abajo) */
+.promo-badge-box {
+    padding: 20px;
+    background: linear-gradient(135deg, #fff3e0 0%, #ffe0b2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.promo-tag {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.3rem;
+    color: #f57c00;
+    background: white;
+    padding: 8px 25px;
+    border-radius: 50px;
+    box-shadow: 0 4px 10px rgba(245, 124, 0, 0.1);
+}
+
+/* --- MODALES NATIVOS PARA PROMOCIONES (SIN JS) --- */
+.promo-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 4000;
+}
+
+/* Se dispara cuando coincide el hashtag de la URL */
+.promo-modal-overlay:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.promo-modal-content {
+    background: white;
+    width: 90%;
+    max-width: 500px;
+    padding: 30px;
+    border-radius: 35px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    transform: scale(0.8);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.promo-modal-overlay:target .promo-modal-content {
+    transform: scale(1);
+}
+
+.promo-modal-content img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.promo-modal-content h3 {
+    font-family: 'Fredoka One', cursive;
+    color: #f57c00;
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+
+.promo-modal-content p {
+    font-family: 'Quicksand', sans-serif;
+    color: #555;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Botón de cerrar (X) */
+.promo-close {
+    position: absolute;
+    top: 15px;
+    right: 22px;
+    font-size: 35px;
+    text-decoration: none;
+    color: #bbb;
+    line-height: 1;
+    transition: color 0.2s, transform 0.2s;
+}
+
+.promo-close:hover {
+    color: #f57c00;
+    transform: scale(1.1);
+}
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 768px) {
+    .promo-grid {
+        grid-template-columns: 1fr; /* Columna única en móviles */
+    }
+    .promo-img-link {
+        height: 200px;
+    }
+}
