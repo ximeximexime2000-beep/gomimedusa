@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <link rel="stylesheet" href="CSS/menu.css">
+       <link rel="stylesheet" href="CSS/piedepagina.css">
+       <link rel="stylesheet" href="CSS/promociones.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="logo">¡GomiMedusa!</div>
+        
+        <!-- Checkbox para el menú móvil (Hack sin JS) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li style="--i:1"><a href="#">TIPOS</a></li>
+            <li style="--i:2"><a href="#">SABORES</a></li>
+            <li style="--i:3"><a href="#">RECETAS</a></li>
+            <li style="--i:4"><a href="#">PRECIO</a></li>
+            <li style="--i:5"><a href="#" class="contact-btn">CONTACTANOS</a></li>
+        </ul>
+    </nav>
+
+
+
+
+
+<section class="promo-section">
+    <h2 class="promo-title">Combos & Promociones</h2>
+    
+    <div class="promo-grid">
+        
+        <div class="promo-card">
+            <a href="#modal-promo-1" class="promo-img-link">
+                <img src="IMAGENES/loco booing.jpg" alt="Promo 1">
+            </a>
+            <div class="promo-badge-box">
+                <span class="promo-tag">¡2x1 en booing!</span>
+            </div>
+        </div>
+
+        <div class="promo-card">
+            <a href="#modal-promo-2" class="promo-img-link">
+                <img src="IMAGENES/caja de gomitas.jpg" alt="Promo 2">
+            </a>
+            <div class="promo-badge-box">
+                <span class="promo-tag">combo caja de gomitas </span>
+            </div>
+        </div>
+
+        <div class="promo-card">
+            <a href="#modal-promo-3" class="promo-img-link">
+                <img src="IMAGENES/paletas locas.jpg" alt="Promo 3">
+            </a>
+            <div class="promo-badge-box">
+                <span class="promo-tag">¡3x2 en paletas locas!</span>
+            </div>
+        </div>
+
+        <div class="promo-card">
+            <a href="#modal-promo-4" class="promo-img-link">
+                <img src="IMAGENES/raspados.jpg" alt="Promo 4">
+            </a>
+            <div class="promo-badge-box">
+                <span class="promo-tag">combo raspados locos</span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<div id="modal-promo-1" class="promo-modal-overlay">
+    <div class="promo-modal-content">
+        <a href="#" class="promo-close">&times;</a>
+        <img src="IMAGENES/loco booing.jpg" alt="Promo 1 Detalle">
+        <h3>¡Todos los Martes!</h3>
+        <p>Compra cualquier jugo booing  y el segundo va por nuestra cuenta.</p>
+    </div>
+</div>
+
+<div id="modal-promo-2" class="promo-modal-overlay">
+    <div class="promo-modal-content">
+        <a href="#" class="promo-close">&times;</a>
+        <img src="IMAGENES/caja de gomitas.jpg" alt="Promo 2 Detalle">
+        <h3>¡fechas especiales!</h3>
+        <p>Llévate una cajita de gomitas para tu persona especisal.</p>
+    </div>
+</div>
+
+<div id="modal-promo-3" class="promo-modal-overlay">
+    <div class="promo-modal-content">
+        <a href="#" class="promo-close">&times;</a>
+        <img src="IMAGENES/paletas locas.jpg" alt="Promo 3 Detalle">
+        <h3>¡Todos los jueves!</h3>
+        <p>compra cualquier sabor de paleta y la tercera va por nuestra cuenta.</p>
+    </div>
+</div>
+
+<div id="modal-promo-4" class="promo-modal-overlay">
+    <div class="promo-modal-content">
+        <a href="#" class="promo-close">&times;</a>
+        <img src="IMAGENES/raspados.jpg" alt="Promo 4 Detalle">
+        <h3>Comparte un buen sabor </h3>
+        <p>¡2x1 raspados locos!. ¡El dulce perfecto para tus dias calursos!</p>
+    </div>
+</div>
+   
+</body>
+<footer class="footer-social">
+        <div class="footer-content">
+            <h2 class="footer-title">¡Hablemos de Dulces!</h2>
+            <p>Síguenos o escríbenos para pedidos especiales</p>
+            
+            <div class="social-grid">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/1234567890" target="_blank" class="social-bubble whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/tu_usuario" target="_blank" class="social-bubble instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Pastelera #456, Ciudad Dulce</p>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            &copy; 2026 ximena luna | Instituto compuingles de oriente
+        </div>
+    </footer>
+</html>
