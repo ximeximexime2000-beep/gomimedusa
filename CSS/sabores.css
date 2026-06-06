@@ -1,0 +1,105 @@
+/* --- SECCIÓN GOMITAS ÁCIDAS (GRILLA 4x3) --- */
+.sour-candy-section {
+    padding: 70px 5%;
+    background: linear-gradient(180deg, #fffaf0 0%, #f3e5f5 100%); /* Fondo degradado sutil */
+    text-align: center;
+}
+
+/* Título Divertido */
+.sour-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    color: #b39ddb; /* Morado pastel ácido */
+    text-shadow: 3px 3px 0px #fff, 5px 5px 0px #ffcc80; /* Efecto sticker 3D */
+    margin-bottom: 50px;
+    letter-spacing: 2px;
+}
+
+/* Configuración Grilla 4x3 */
+.sour-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 Columnas fijas */
+    grid-template-rows: repeat(3, auto);  /* 3 Filas automáticas */
+    gap: 30px;
+}
+
+/* Tarjetas */
+.sour-card {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(179, 157, 219, 0.2);
+    border: 3px solid #fff;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Efecto al pasar el cursor */
+.sour-card:hover {
+    transform: scale(1.05) rotate(1deg);
+    box-shadow: 0 12px 25px rgba(255, 154, 158, 0.4);
+}
+
+/* Contenedor de Imagen (Arriba) */
+.sour-img {
+    width: 100%;
+    height: 190px;
+    overflow: hidden;
+}
+
+.sour-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.sour-card:hover .sour-img img {
+    transform: scale(1.1) cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Contenedor de Texto / Precio (Abajo) */
+.sour-price-box {
+    padding: 15px;
+    /* Degradado interno pastel para el área del precio */
+    background: linear-gradient(135deg, #ffecb3 0%, #ffcc80 100%); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sour-price {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4rem;
+    color: #e65100; /* Contraste oscuro para legibilidad del precio */
+    background: white;
+    padding: 4px 18px;
+    border-radius: 30px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.05);
+}
+
+/* --- RESPONSIVIDAD PARA LA GRILLA --- */
+
+/* Pantallas Medianas (Tablets - 2 columnas por fila) */
+@media (max-width: 992px) {
+    .sour-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .sour-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Pantallas Pequeñas (Móviles - 1 columna por fila) */
+@media (max-width: 576px) {
+    .sour-grid {
+        grid-template-columns: 1fr;
+    }
+    .sour-title {
+        font-size: 2rem;
+    }
+    .sour-img {
+        height: 160px;
+    }
+}

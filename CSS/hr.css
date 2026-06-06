@@ -1,0 +1,60 @@
+/* Estilo para la etiqueta HR divertida */
+.separator-candy {
+    border: none;                /* Quitamos la línea por defecto */
+    height: 20px;               /* Le damos grosor */
+    margin: 50px auto;          /* Espaciado arriba y abajo */
+    width: 80%;                 /* Ancho del separador */
+    background-image: linear-gradient(
+        45deg, 
+        #ff9a9e 25%, 
+        #fad0c4 25%, 
+        #fad0c4 50%, 
+        #ff9a9e 50%, 
+        #ff9a9e 75%, 
+        #fad0c4 75%, 
+        #fad0c4 100%
+    );
+    background-size: 40px 40px; /* Tamaño del patrón de rayas */
+    border-radius: 50px;        /* Bordes redondeados */
+    box-shadow: 0 4px 10px rgba(255, 154, 158, 0.3);
+    position: relative;
+    overflow: visible;
+    animation: slideStripes 2s linear infinite; /* Animación de movimiento */
+}
+
+/* El elemento decorativo circular en el centro */
+.separator-candy::after {
+    content: "🍭";              /* Un emoji o podrías usar un icono */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border: 3px solid #a1c4fd;
+}
+
+/* Animación para que las rayas del caramelo se muevan */
+@keyframes slideStripes {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 40px 0;
+    }
+}
+
+/* Ajuste para móviles */
+@media (max-width: 480px) {
+    .separator-candy {
+        width: 90%;
+        height: 15px;
+    }
+    .separator-candy::after {
+        font-size: 1.2rem;
+        padding: 5px;
+    }
+}

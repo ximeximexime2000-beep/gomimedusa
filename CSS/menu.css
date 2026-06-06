@@ -1,0 +1,175 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Quicksand', sans-serif;
+    background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%);
+    min-height: 100vh;
+}
+
+/* Navbar Estilo Pastel */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 2px 2px #ff6b6b;
+    animation: fadeInDown 0.8s ease-out;
+}
+
+/* Enlaces del Menú (ESCRITORIO - Con animación restaurada) */
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin: 0 15px;
+    /* RESTAURADA: Animación escalonada usando tu variable --i del HTML */
+    animation: fadeInRight 0.5s ease forwards;
+    animation-delay: calc(var(--i) * 0.1s);
+    opacity: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #6d6d6d;
+    font-weight: bold;
+    font-size: 1.1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ff6b6b;
+    transform: scale(1.1);
+}
+
+.contact-btn {
+    background-color: #a1c4fd;
+    padding: 10px 20px;
+    border-radius: 50px;
+    color: white !important;
+    box-shadow: 0 4px 10px rgba(161, 196, 253, 0.5);
+}
+
+.contact-btn:hover {
+    background-color: #c2e9fb;
+    box-shadow: 0 6px 15px rgba(161, 196, 253, 0.8);
+}
+
+/* Menú Hamburguesa (Oculto en PC) */
+.menu-toggle {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 1001;
+}
+
+.hamburger span {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Animaciones */
+@keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Corregida para que termine en su lugar (0) y no mueva el menú a un costado */
+@keyframes fadeInRight {
+    from { opacity: 0; transform: translateX(20px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* RESPONSIVIDAD (Móvil y Tablets) con Animación Fluida */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex; /* Muestra las tres rayitas en móvil */
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%; /* Se despliega justo debajo de la barra */
+        right: 0;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background: rgba(255, 255, 255, 0.98);
+        text-align: center;
+        padding: 20px 0;
+        border-radius: 0 0 20px 20px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+
+        /* --- ANIMACIÓN FLUIDA --- */
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-20px); /* Empieza un poco más arriba */
+        transition: all 0.4s ease-in-out; /* Controla la velocidad de la transición */
+    }
+
+    .nav-links li {
+        margin: 15px 0;
+        opacity: 1; /* Forzamos visibilidad de los elementos dentro de la lista */
+        animation: none; /* Quitamos la animación de escritorio que los rompía */
+    }
+
+    /* --- ESTADO ACTIVO (Cuando se da clic al menú hamburguesa) --- */
+    .menu-toggle:checked ~ .nav-links {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0); /* Se desliza suavemente hacia abajo a su posición original */
+    }
+    
+    /* Animación de las tres líneas convirtiéndose en X */
+    .menu-toggle:checked ~ .hamburger span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(2) {
+        opacity: 0;
+    }
+    .menu-toggle:checked ~ .hamburger span:nth-child(3) {
+        transform: rotate(-45deg) translate(6px, -6px);
+    }
+}
+
+/* Estilos del Hero */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    color: #555;
+}
+
+.hero h1 {
+    font-family: 'Fredoka One', cursive;
+    font-size: 3rem;
+    background: -webkit-linear-gradient(#ff9a9e, #a1c4fd);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+}

@@ -1,0 +1,173 @@
+/* --- SECCIÓN GRILLA DE INGREDIENTES 2x4 --- */
+.menu-ingredients-section {
+    padding: 60px 5%;
+    background: linear-gradient(180deg, #f3e5f5 0%, #e8eaf6 100%);
+    text-align: center;
+}
+
+.ingredients-title {
+    font-family: 'Fredoka One', cursive;
+    font-size: 2.5rem;
+    color: #9fa8da;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px white;
+}
+
+/* Configuración de Grilla 2x4 */
+.ingredients-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 Columnas fijas */
+    grid-template-rows: repeat(4, auto);  /* 4 Filas */
+    gap: 35px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Tarjeta dividida en 3 */
+.ing-card {
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(159, 168, 218, 0.2);
+    display: flex;
+    flex-direction: column;
+    border: 3px solid #fff;
+}
+
+/* 1. Imagen (Arriba) con efecto Hover */
+.ing-img-link {
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    display: block;
+    cursor: pointer;
+}
+
+.ing-img-link img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+}
+
+/* Animación Hover Zoom en Imagen */
+.ing-img-link:hover img {
+    transform: scale(1.1);
+    filter: brightness(0.9);
+}
+
+/* 2. Detalles e Ingredientes (Medio) */
+.ing-details {
+    padding: 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ing-details h5 {
+    font-family: 'Fredoka One', cursive;
+    color: #7986cb;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.ing-list {
+    font-family: 'Quicksand', sans-serif;
+    color: #777;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* 3. Precio (Abajo) */
+.ing-price {
+    font-family: 'Fredoka One', cursive;
+    font-size: 1.4rem;
+    color: white;
+    background: linear-gradient(90deg, #ffb74d 0%, #ffb74d 100%);
+    padding: 10px 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* --- SISTEMA MODAL CSS SIN JAVASCRIPT --- */
+.ing-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease;
+    z-index: 3000;
+}
+
+/* Se activa cuando la URL tiene el #id correspondiente */
+.ing-modal-overlay:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ing-modal-content {
+    background: white;
+    width: 85%;
+    max-width: 450px;
+    padding: 30px;
+    border-radius: 30px;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transform: translateY(-50px);
+    transition: all 0.4s ease;
+}
+
+.ing-modal-overlay:target .ing-modal-content {
+    transform: translateY(0);
+}
+
+.ing-modal-content img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.ing-modal-content h3 {
+    font-family: 'Fredoka One', cursive;
+    color: #ff8a80;
+    margin-bottom: 10px;
+}
+
+.ing-modal-content p {
+    font-family: 'Quicksand', sans-serif;
+    color: #666;
+}
+
+/* Botón de cerrar */
+.ing-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    text-decoration: none;
+    color: #aaa;
+    transition: color 0.2s;
+}
+
+.ing-close:hover {
+    color: #ff8a80;
+}
+
+/* --- RESPONSIVIDAD --- */
+@media (max-width: 768px) {
+    .ingredients-grid {
+        grid-template-columns: 1fr; /* Pasa a 1 columna en móviles */
+    }
+}
