@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <link rel="stylesheet" href="CSS/menu.css">
+        <link rel="stylesheet" href="CSS/piedepagina.css">
+        <link rel="stylesheet" href="CSS/recetas.css">
+</head>
+
+
+
+    <nav class="navbar">
+        <div class="logo">¡GomiMedusa!</div>
+        
+        <!-- Checkbox para el menú móvil (Hack sin JS) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li style="--i:1"><a href="#">TIPOS</a></li>
+            <li style="--i:2"><a href="#">SABORES</a></li>
+            <li style="--i:3"><a href="#">RECETAS</a></li>
+            <li style="--i:4"><a href="#">PRECIO</a></li>
+            <li style="--i:5"><a href="#" class="contact-btn">CONTACTANOS</a></li>
+        </ul>
+    </nav>
+<body>
+    
+
+<section class="menu-ingredients-section">
+    <h2 class="ingredients-title">Especialidades de la Casa</h2>
+    
+    <div class="ingredients-grid">
+        
+        <div class="ing-card">
+            <a href="#modal-ing-1" class="ing-img-link">
+                <img src="IMAGENES/chalora de gomitas enchiladas.jpg" alt="Postre 1">
+            </a>
+            <div class="ing-details">
+                <h5>CHAROLA DE GOMITAS ENCHILADAS</h5>
+                <p class="ing-list">CHAMOY,CHILITO TAJIN, CHILITO MIGUELITO.</p>
+            </div>
+            <div class="ing-price">$25.00</div>
+        </div>
+
+        <div class="ing-card">
+            <a href="#modal-ing-2" class="ing-img-link">
+                <img src="IMAGENES/charola de gomitas simples.jpg" alt="Postre 2">
+            </a>
+            <div class="ing-details">
+                <h5>CHAROLA DE GOMITAS</h5>
+                <p class="ing-list">GOMITAS DE SU PREFERENCIA.</p>
+            </div>
+            <div class="ing-price">$25.00</div>
+        </div>
+
+        <div class="ing-card">
+            <a href="#modal-ing-3" class="ing-img-link">
+                <img src="IMAGENES/vaso de gomitas1.jpg" alt="Postre 3">
+            </a>
+            <div class="ing-details">
+                <h5>VASO DE GOMITAS</h5>
+                <p class="ing-list">GOMITAS A SU GUSTO.</p>
+            </div>
+            <div class="ing-price">$15.00</div>
+        </div>
+
+        <div class="ing-card">
+            <a href="#modal-ing-4" class="ing-img-link">
+                <img src="IMAGENES/vaso loco.jpg" alt="Postre 4">
+            </a>
+            <div class="ing-details">
+                <h5>VASO LOCO</h5>
+                <p class="ing-list">GOMITAS COMBINADAS,CHAMOY,CHILITO TAJIN O CHILITIO MIGUELITO,.</p>
+            </div>
+            <div class="ing-price">$30.00</div>
+        </div>
+
+        <div class="ing-card">
+            <a href="#modal-ing-5" class="ing-img-link">
+                <img src="IMAGENES/VASODEGOMITASACIDAS.jpg" alt="Postre 5">
+            </a>
+            <div class="ing-details">
+                <h5>VASO DE GOMITAS ACIDAS</h5>
+                <p class="ing-list">GOMITAS DE SU PREFERENCIA Y TIRITAS ACIDITAS.</p>
+            </div>
+            <div class="ing-price">$20.00</div>
+        </div>
+
+        <div class="ing-card">
+            <a href="#modal-ing-6" class="ing-img-link">
+                <img src="IMAGENES/charoladegomitasimples.jpg" alt="Postre 6">
+            </a>
+            <div class="ing-details">
+                <h5>CHAROLA DE GOMITAS SIMPLES</h5>
+                <p class="ing-list">GOMITAS SURTIDAS Y EN EL CENTRO UN BOTECITO DE CHAMOY.</p>
+            </div>
+            <div class="ing-price">$25.00</div>
+        </div>
+
+        <div class="ing-card">
+            <a href="#modal-ing-7" class="ing-img-link">
+                <img src="IMAGENES/gomi pelables.jpg" alt="Postre 7">
+            </a>
+            <div class="ing-details">
+                <h5>BOLCITA DE GOMITAS PELABLES</h5>
+                <p class="ing-list">BOLSITAS CON CHAMOY </p>
+            </div>
+            <div class="ing-price">$35.00</div>
+        </div>
+
+        <div class="ing-card">
+            <a href="#modal-ing-8" class="ing-img-link">
+                <img src="IMAGENES/VASODEGOMITASPELABLES.jpg" alt="Postre 8">
+            </a>
+            <div class="ing-details">
+                <h5>VASO DE GOMITAS PELABLES</h5>
+                <p class="ing-list">VASITO CON SOLO UN SABOR DE GOMITA PELABLE</p>
+            </div>
+            <div class="ing-price">$20.00</div>
+        </div>
+
+    </div>
+</section>
+
+<div id="modal-ing-1" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/chalora de gomitas enchiladas.jpg" alt="Detalle">
+        <h3>CHAROLA DE GOMITAS ENCHILADAS</h3>
+        <p>Una experiencia picosita y dulce .</p>
+    </div>
+</div>
+
+<div id="modal-ing-2" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/charola de gomitas simples.jpg" alt="Detalle">
+        <h3>CHAROLA DE GOMITAS</h3>
+        <p>Directo a tu paladar.</p>
+    </div>
+</div>
+<div id="modal-ing-3" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/vaso de gomitas1.jpg" alt="Detalle">
+        <h3>VASO DE GOMITAS</h3>
+        <p>una experencia acidita con azuquitar.</p>
+    </div>
+</div>
+<div id="modal-ing-4" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/vaso loco.jpg" alt="Detalle">
+        <h3>VASO DE GOMITAS LOCO</h3>
+        <p>vasito dulce y picosito.</p>
+    </div>
+</div>
+<div id="modal-ing-5" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/VASODEGOMITASACIDAS.jpg" alt="Detalle">
+        <h3>VASO DE GOMITAS ACIDAS</h3>
+        <p>vasito dulce y acidito.</p>
+    </div>
+</div>
+<div id="modal-ing-6" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/charoladegomitasimples.jpg" alt="Detalle">
+        <h3>CHAROLA DE GOMITAS SIMPLES</h3>
+        <p>Directo a tu paladar y a tu corazon endulzar.</p>
+    </div>
+</div>
+<div id="modal-ing-7" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/charola de gomitas pelables.jpg" alt="Detalle">
+        <h3>BOLCITAS DE GOMITAS PELABLES</h3>
+        <p>sabores unicos de frutas.</p>
+    </div>
+</div>
+<div id="modal-ing-8" class="ing-modal-overlay">
+    <div class="ing-modal-content">
+        <a href="#" class="ing-close">&times;</a>
+        <img src="IMAGENES/VASODEGOMITASPELABLES.jpg" alt="Detalle">
+        <h3>VASO DE GOMITAS PELABLES</h3>
+        <p>VASITO CON SURTIDO DE GOMITAS.</p>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<footer class="footer-social">
+        <div class="footer-content">
+            <h2 class="footer-title">¡Hablemos de Dulces!</h2>
+            <p>Síguenos o escríbenos para pedidos especiales</p>
+            
+            <div class="social-grid">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/1234567890" target="_blank" class="social-bubble whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/tu_usuario" target="_blank" class="social-bubble instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Pastelera #456, Ciudad Dulce</p>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            &copy; 2026 ximena luna | Instituto compuingles de oriente
+        </div>
+    </footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</html>

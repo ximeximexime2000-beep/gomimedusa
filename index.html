@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menú Pastel Mágico</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Importamos una fuente divertida de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS/estilo.css">
+    <link rel="stylesheet" href="CSS/banner.css">
+    <link rel="stylesheet" href="CSS/menu.css">
+    <link rel="stylesheet" href="CSS/hr.css">
+    <link rel="stylesheet" href="CSS/piedepagina.css">
+    <link rel="stylesheet" href="CSS/productos.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="logo">¡GomiMedusa!</div>
+        
+        <!-- Checkbox para el menú móvil (Hack sin JS) -->
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <ul class="nav-links">
+            <li style="--i:1"><a href="#">TIPOS</a></li>
+            <li style="--i:2"><a href="#">SABORES</a></li>
+            <li style="--i:3"><a href="#">RECETAS</a></li>
+            <li style="--i:4"><a href="#">PRECIO</a></li>
+            <li style="--i:5"><a href="#" class="contact-btn">CONTACTANOS</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="banner-container">
+    <div class="banner-item video-item">
+        <video autoplay muted loop>
+            <source src="videos/videoplayback (1).mp4" type="video/mp4">
+        </video>
+        <div class="overlay-text">gomitas saludables</div>
+    </div>
+
+    <a href="#modal1" class="banner-item img-item">
+        <img src="IMAGENES/AVQLX7PXYNBR5PNRM52OFJVUTY.jpg" alt="Postre 1">
+        <div class="overlay-text">gomitas caseras</div>
+    </a>
+
+    <div class="banner-item video-item">
+        <video autoplay muted loop>
+            <source src="videos/videoplayback (6).mp4" type="video/mp4">
+        </video>
+        <div class="overlay-text">gomitas hechas a fabrica</div>
+    </div>
+
+    <a href="#modal2" class="banner-item img-item">
+        <img src="IMAGENES/pick-and-mix-171342_1920.jpg" alt="Postre 2">
+        <div class="overlay-text">gomitas</div>
+    </a>
+</section>
+
+<div id="modal1" class="modal-overlay">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="IMAGENES/AVQLX7PXYNBR5PNRM52OFJVUTY.jpg" alt="Detalle">
+        <div class="modal-text">
+            <h2>gomitas saludables</h2>
+            <p>Las gomitas nutritivas son suplementos masticables elaborados con grenetina o pectina vegetal</p>
+        </div>
+    </div>
+</div>
+
+<div id="modal2" class="modal-overlay">
+    <div class="modal-content">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="IMAGENES/pick-and-mix-171342_1920.jpg" alt="Detalle">
+        <div class="modal-text">
+            <h2>gomitas</h2>
+            <p>las gomitas son un dulce mas popular fabricadas principalmemte con grenetina,jarabes frutales.</p>
+        </div>
+    </div>
+</div>
+
+    <header class="hero">
+        <h1>Bienvenidos al mundo de los sabores</h1>
+        <p>Explora nuestras delicias en colores pastel.</p>
+    </header>
+
+    <!-- Separador divertido -->
+<hr class="separator-candy">
+
+<!-- Sección de Información en Grilla -->
+<section class="info-grid">
+    <!-- Apartado 1 -->
+    <div class="info-card">
+        <div class="card-icon">🍰</div>
+        <h3>MITOS</h3>
+        <p class="preview-text">MITOS QUE ENGAÑAN ...</p>
+        
+        <input type="checkbox" id="read-more-1" class="read-more-state">
+        <div class="more-content">
+            <p>ESTAN HECHAS DE HERRADURAS,PEZUÑAS Y CUERNOS DE CABALLO.</p>
+
+            <p>SI TE TRAGAS UNA GOMITA SE TE PEGA EN EL ESTOMAGO POR AÑOS.</p>
+
+            <P>EL COLOR ROJO SE SACA DE ESCARABAJOS MACHACADOS.</P>
+
+            <P>NINGUNA GOMITA ES APTA PARA VEGETARIANOS.</P>
+        </div>
+        
+        <label for="read-more-1" class="read-more-trigger"></label>
+    </div>
+
+    <!-- Apartado 2 -->
+    <div class="info-card">
+        <div class="card-icon">🍓</div>
+        <h3>EXISTENCIAS</h3>
+        <p class="preview-text">DIFERENCIA ENTRE SABORES ...</p>
+        
+        <input type="checkbox" id="read-more-2" class="read-more-state">
+        <div class="more-content">
+            <p>CLASICAS DE GRENETINA.</p>
+
+            <P>DE PECTINA O ALMIDON.</P>
+
+            <P>ACIDITAS/SOUR.</P>
+
+            <P>ENCHILADAS.</P>
+        </div>
+        
+        <label for="read-more-2" class="read-more-trigger"></label>
+    </div>
+
+    <!-- Apartado 3 -->
+    <div class="info-card">
+        <div class="card-icon">🧁</div>
+        <h3>DE QUE ESTAN HECHAS </h3>
+        <p class="preview-text">INGREDIENTES AH SABER...</p>
+        
+        <input type="checkbox" id="read-more-3" class="read-more-state">
+        <div class="more-content">
+            <p>GRENETINA</p>
+
+            <p>AZUCAR Y JARABE DE MAIZ.</p>
+
+            <p>AGUA.</p>
+
+            <P>ACIDO CITRICO O MALIACO.</P>
+        </div>
+        
+        <label for="read-more-3" class="read-more-trigger"></label>
+    </div>
+
+    <!-- Apartado 4 -->
+    <div class="info-card">
+        <div class="card-icon">🍬</div>
+        <h3>COSTOS DE FABRICACION </h3>
+        <p class="preview-text">Sabor sin límites...</p>
+        
+        <input type="checkbox" id="read-more-4" class="read-more-state">
+        <div class="more-content">
+            <p>Creemos en la inclusión. Ofrecemos una línea completa libre de productos de origen animal sin sacrificar el sabor.</p>
+        </div>
+        
+        <label for="read-more-4" class="read-more-trigger"></label>
+    </div>
+</section>
+    <!-- Separador divertido -->
+<hr class="separator-candy">
+
+<section class="product-showcase">
+    <h2 class="section-title">Nuestras Delicias</h2>
+    
+    <div class="products-grid">
+        <!-- Producto 1 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi asidas.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gimita dulce </h4>
+                <p>azucarada y asida.</p>
+                <span class="price">$25.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi azucar.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gomita con azucar</h4>
+                <p>diferente sabor .</p>
+                <span class="price">$12.50</span>
+            </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi chamoy.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gomita picosita</h4>
+                <p>dulce con chamoy.</p>
+                <span class="price">$18.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 4 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi enchiladas.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gomi picositax</h4>
+                <p> gomitas enchiladas.</p>
+                <span class="price">$15.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 5 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi panditas.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gamitas panditas</h4>
+                <p>diferentes colores .</p>
+                <span class="price">$10</span>
+            </div>
+        </div>
+
+        <!-- Producto 6 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi pelables.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gomitas que se pelan</h4>
+                <p>diferentes frutas y sabores .</p>
+                <span class="price">$35.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 7 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi pinguino.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gomita animalito</h4>
+                <p>sabor unico y figura .</p>
+                <span class="price">$25.00</span>
+            </div>
+        </div>
+
+        <!-- Producto 8 -->
+        <div class="product-card">
+            <div class="product-img">
+                <img src="IMAGENES/gomi rueda.jpg">
+            </div>
+            <div class="product-info">
+                <h4>gomita redonda</h4>
+                <p>azucarada y deliciosa.</p>
+                <span class="price">$22.00</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+</body>
+<footer class="footer-social">
+        <div class="footer-content">
+            <h2 class="footer-title">¡Hablemos de Dulces!</h2>
+            <p>Síguenos o escríbenos para pedidos especiales</p>
+            
+            <div class="social-grid">
+                <!-- WhatsApp -->
+                <a href="https://wa.me/1234567890" target="_blank" class="social-bubble whatsapp">
+                    <i class="fab fa-whatsapp"></i>
+                    <span>WhatsApp</span>
+                </a>
+
+                <!-- Instagram -->
+                <a href="https://instagram.com/tu_usuario" target="_blank" class="social-bubble instagram">
+                    <i class="fab fa-instagram"></i>
+                    <span>Instagram</span>
+                </a>
+            </div>
+            
+            <div class="footer-info">
+                <p><i class="fas fa-map-marker-alt"></i> Av. Pastelera #456, Ciudad Dulce</p>
+            </div>
+        </div>
+        
+        <div class="footer-copy">
+            &copy; 2026 ximena luna | Instituto compuingles de oriente
+        </div>
+    </footer>
+</html>
